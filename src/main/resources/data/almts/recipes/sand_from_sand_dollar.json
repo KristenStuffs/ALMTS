@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "iron_ingot",
+  "ingredients": [
+    {
+      "item": "almts:sand_dollar"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "minecraft:sand"
+  }
+}
