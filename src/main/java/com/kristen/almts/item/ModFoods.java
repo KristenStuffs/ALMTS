@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoods {
-    @SuppressWarnings("deprecation")
+	public static final FoodProperties FRIED_SHELL = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.6F).meat().build();    
+	@SuppressWarnings("deprecation")
 	public static final FoodProperties RAW_ATLANTIC_LOBSTER = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.2F).effect(new MobEffectInstance(MobEffects.HUNGER, 300, 1), 0.25F).meat().build();
 }

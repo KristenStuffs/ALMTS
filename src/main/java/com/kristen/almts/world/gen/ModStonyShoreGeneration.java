@@ -25,7 +25,8 @@ public class ModStonyShoreGeneration {
 
             base.add(ModPlacedFeatures.CLAM_SHELL_STONY_SHORE_PLACED);     
             base.add(ModPlacedFeatures.GIANT_CLAM_SHELL_PLACED);      
-            
+            base.add(ModPlacedFeatures.BARNACLES_LAND_PLACED);      
+            base.add(ModPlacedFeatures.BARNACLES_SEA_PLACED);      
         }
         
     }

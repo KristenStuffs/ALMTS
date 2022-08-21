@@ -1,12 +1,17 @@
 {
 	"item.almts.pearl": "Pearl",
     "item.almts.shell": "Shell",
+    "item.almts.fried_shell": "Fried Shell",    
 	"item.almts.raw_atlantic_lobster": "Raw Atlantic Lobster",
 	
 	"block.almts.pearl_block": "Pearl Block",
 	"block.almts.sand_dollar": "Sand Dollar",
 	"block.almts.clam_shell": "Clam Shell",
 	"block.almts.giant_clam_shell": "Giant Clam Shell",	
+	"block.almts.barnacles": "Barnacles",	
+		
+	"death.attack.barnacles": "%1$s failed a game of chicken",
+	"death.attack.barnacles.player": "%1$s was pushed into barnacles whilst fighting %2$s",
 	
 	"itemGroup.almtstab": "A Lot More to Sea"
 }

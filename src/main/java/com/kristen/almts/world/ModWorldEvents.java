@@ -3,7 +3,6 @@ package com.kristen.almts.world;
 import com.kristen.almts.ALMTS;
 import com.kristen.almts.world.gen.ModBeachGeneration;
 import com.kristen.almts.world.gen.ModStonyShoreGeneration;
-
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +13,5 @@ public class ModWorldEvents {
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModBeachGeneration.generatePatch(event);
         ModStonyShoreGeneration.generatePatch(event);
-        
     }
 }

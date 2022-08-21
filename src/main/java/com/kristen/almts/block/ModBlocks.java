@@ -1,6 +1,7 @@
 package com.kristen.almts.block;
 
 import com.kristen.almts.ALMTS;
+import com.kristen.almts.block.custom.BarnaclesBlock;
 import com.kristen.almts.block.custom.ClamShellBlock;
 import com.kristen.almts.block.custom.GiantClamShellBlock;
 import com.kristen.almts.block.custom.SandDollarBlock;
@@ -28,7 +29,7 @@ public class ModBlocks {
 	// Register Blocks
     public static final RegistryObject<Block> PEARL_BLOCK = registerBlock("pearl_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.ALMTS_TAB);
+                    .strength(2f, 4F).requiresCorrectToolForDrops()), ModCreativeModeTab.ALMTS_TAB);
     
     public static final RegistryObject<Block> SAND_DOLLAR = registerBlock("sand_dollar",
             () -> new SandDollarBlock(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()
@@ -41,6 +42,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> GIANT_CLAM_SHELL = registerBlock("giant_clam_shell",
             () -> new GiantClamShellBlock(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()
                     .strength(0.8f).requiresCorrectToolForDrops()), ModCreativeModeTab.ALMTS_TAB);    
+
+    public static final RegistryObject<Block> BARNACLES = registerBlock("barnacles",
+            () -> new BarnaclesBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
+                    .strength(25.0f, 128F).requiresCorrectToolForDrops()), ModCreativeModeTab.ALMTS_TAB);  
     
     // Boring Junk
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

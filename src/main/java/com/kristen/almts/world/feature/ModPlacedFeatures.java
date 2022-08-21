@@ -24,7 +24,14 @@ public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> GIANT_CLAM_SHELL_PLACED = PlacementUtils.register("giant_clam_shell_placed",
             ModConfiguredFeatures.PATCH_GIANT_CLAM_SHELL, RarityFilter.onAverageOnceEvery(12),
             PlacementUtils.HEIGHTMAP, BiomeFilter.biome());    
-
-
+    
+    public static final Holder<PlacedFeature> BARNACLES_LAND_PLACED = PlacementUtils.register("barnacles_land_placed",
+            ModConfiguredFeatures.PATCH_BARNACLES_LAND, RarityFilter.onAverageOnceEvery(10),
+            PlacementUtils.HEIGHTMAP, BiomeFilter.biome());   
+    
+    public static final Holder<PlacedFeature> BARNACLES_SEA_PLACED = PlacementUtils.register("barnacles_sea_placed",
+            ModConfiguredFeatures.PATCH_BARNACLES_SEA, RarityFilter.onAverageOnceEvery(2),
+            PlacementUtils.HEIGHTMAP, BiomeFilter.biome());  
+ 
 
 }

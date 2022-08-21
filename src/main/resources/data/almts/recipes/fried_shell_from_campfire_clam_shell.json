@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 300,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "almts:clam_shell"
+  },
+  "result": "almts:fried_shell"
+}

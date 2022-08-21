@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-	"almts:pearl_block"
+	"almts:pearl_block",
+	"almts:barnacles"
   ]
 }
