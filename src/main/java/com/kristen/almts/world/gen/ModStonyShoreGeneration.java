@@ -18,6 +18,7 @@ public class ModStonyShoreGeneration {
     public static void generatePatch(final BiomeLoadingEvent event) {
         ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
+        
 
         if(types.contains(BiomeDictionary.Type.BEACH)) {
             List<Holder<PlacedFeature>> base =
