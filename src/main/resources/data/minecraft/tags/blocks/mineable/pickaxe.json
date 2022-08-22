@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
 	"almts:pearl_block",
-	"almts:barnacles"
+	"almts:barnacles",
+	"almts:barnacle_paste"
   ]
 }

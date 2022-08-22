@@ -1,14 +1,19 @@
 {
 	"item.almts.pearl": "Pearl",
     "item.almts.shell": "Shell",
-    "item.almts.fried_shell": "Fried Shell",    
+    "item.almts.fried_shell": "Fried Shell", 
+     "item.almts.sponge_piece": "Piece of Sponge",    
 	"item.almts.raw_atlantic_lobster": "Raw Atlantic Lobster",
 	
 	"block.almts.pearl_block": "Pearl Block",
 	"block.almts.sand_dollar": "Sand Dollar",
 	"block.almts.clam_shell": "Clam Shell",
 	"block.almts.giant_clam_shell": "Giant Clam Shell",	
-	"block.almts.barnacles": "Barnacles",	
+	"block.almts.barnacles": "Barnacles",
+	"block.almts.barnacle_paste": "Barnacle Paste",	
+    "block.almts.living_sponge": "Living Sponge",	
+    "block.almts.living_sponge_plant": "Living Sponge Plant",	
+   
 		
 	"death.attack.barnacles": "%1$s failed a game of chicken",
 	"death.attack.barnacles.player": "%1$s was pushed into barnacles whilst fighting %2$s",

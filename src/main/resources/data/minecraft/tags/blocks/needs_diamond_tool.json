@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-  "almts:barnacles"
+  "almts:barnacles",
+  "almts:barnacle_paste"
   ]
 }

@@ -1,17 +1,21 @@
 package com.kristen.almts.block;
 
 import com.kristen.almts.ALMTS;
+import com.kristen.almts.block.custom.CustomCarpetWaterlogged;
 import com.kristen.almts.block.custom.BarnaclesBlock;
 import com.kristen.almts.block.custom.ClamShellBlock;
 import com.kristen.almts.block.custom.GiantClamShellBlock;
+import com.kristen.almts.block.custom.LivingSpongeBlock;
+import com.kristen.almts.block.custom.LivingSpongePlantBlock;
 import com.kristen.almts.block.custom.SandDollarBlock;
 import com.kristen.almts.item.ModItems;
 import com.kristen.almts.misc.ModCreativeModeTab;
-
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,8 +50,21 @@ public class ModBlocks {
     public static final RegistryObject<Block> BARNACLES = registerBlock("barnacles",
             () -> new BarnaclesBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
                     .strength(25.0f, 128F).requiresCorrectToolForDrops()), ModCreativeModeTab.ALMTS_TAB);  
+
+    public static final RegistryObject<Block> BARNACLE_PASTE = registerBlock("barnacle_paste",
+            () -> new CustomCarpetWaterlogged(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
+                    .strength(25.0f, 128F).requiresCorrectToolForDrops().speedFactor(0.0F).jumpFactor(0.0F)), ModCreativeModeTab.ALMTS_TAB); 
+    
+    public static final RegistryObject<Block> LIVING_SPONGE = registerBlock("living_sponge",
+            () -> new LivingSpongeBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
+                    .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), ModCreativeModeTab.ALMTS_TAB); 
+   
+    public static final RegistryObject<Block> LIVING_SPONGE_PLANT = registerBlock("living_sponge_plant",
+            () -> new LivingSpongePlantBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
+                    .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), null); 
     
     // Boring Junk
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

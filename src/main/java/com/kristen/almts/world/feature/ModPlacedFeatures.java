@@ -31,7 +31,7 @@ public class ModPlacedFeatures {
     
     public static final Holder<PlacedFeature> BARNACLES_SEA_PLACED = PlacementUtils.register("barnacles_sea_placed",
             ModConfiguredFeatures.PATCH_BARNACLES_SEA, RarityFilter.onAverageOnceEvery(2),
-            PlacementUtils.HEIGHTMAP, BiomeFilter.biome());  
- 
+            PlacementUtils.HEIGHTMAP, BiomeFilter.biome());     
+
 
 }

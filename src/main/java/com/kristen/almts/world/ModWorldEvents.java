@@ -12,6 +12,7 @@ public class ModWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModBeachGeneration.generatePatch(event);
-        ModStonyShoreGeneration.generatePatch(event);
+        ModStonyShoreGeneration.generatePatch(event);      
     }
-}
+    	}
+
