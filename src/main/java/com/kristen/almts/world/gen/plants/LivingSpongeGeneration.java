@@ -2,6 +2,7 @@ package com.kristen.almts.world.gen.plants;
 
 import com.kristen.almts.block.ModBlocks;
 import com.kristen.almts.block.custom.LivingSpongeBlock;
+import com.kristen.almts.world.ModWorldEventsAlt;
 import com.mojang.serialization.Codec;
 import java.util.Random;
 import net.minecraft.core.BlockPos;
@@ -9,16 +10,13 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class LivingSpongeGeneration extends Feature<NoneFeatureConfiguration> {
+public class LivingSpongeGeneration extends ModWorldEventsAlt<NoneFeatureConfiguration> {
    public LivingSpongeGeneration(Codec<NoneFeatureConfiguration> p_66219_) {
-      super(p_66219_);
    }
      
-   
 
    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> p_159956_) {
       int i = 0;
@@ -42,7 +40,7 @@ public class LivingSpongeGeneration extends Feature<NoneFeatureConfiguration> {
                }
             } else if (l > 0) {
                BlockPos blockpos2 = blockpos1.below();
-               if (blockstate.canSurvive(worldgenlevel, blockpos2) && !worldgenlevel.getBlockState(blockpos2.below()).is(Blocks.KELP)) {
+               if (blockstate.canSurvive(worldgenlevel, blockpos2) && !worldgenlevel.getBlockState(blockpos2.below()).is(ModBlocks.LIVING_SPONGE.get())) {
                   worldgenlevel.setBlock(blockpos2, blockstate.setValue(LivingSpongeBlock.AGE, Integer.valueOf(random.nextInt(4) + 20)), 2);
                   ++i;
                }
