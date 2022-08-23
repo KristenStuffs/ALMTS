@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.kristen.almts.block.ModBlocks;
 import com.kristen.almts.item.ModItems;
+import com.kristen.almts.world.ModWorldEventsAlt;
 
 @Mod(ALMTS.MOD_ID)
 public class ALMTS {
@@ -20,7 +21,6 @@ public class ALMTS {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    // Add a comment
     public ALMTS() {
 
         FMLJavaModLoadingContext.get().getModEventBus();
@@ -28,12 +28,13 @@ public class ALMTS {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModWorldEventsAlt.register(eventBus); 
 
         eventBus.addListener(this::setup);
         
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(this);        
     }
     
 	@SuppressWarnings("unused")

@@ -2,7 +2,6 @@ package com.kristen.almts.world.gen.plants;
 
 import com.kristen.almts.block.ModBlocks;
 import com.kristen.almts.block.custom.LivingSpongeBlock;
-import com.kristen.almts.world.ModWorldEventsAlt;
 import com.mojang.serialization.Codec;
 import java.util.Random;
 import net.minecraft.core.BlockPos;
@@ -10,13 +9,14 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class LivingSpongeGeneration extends ModWorldEventsAlt<NoneFeatureConfiguration> {
+public class LivingSpongeGeneration extends Feature<NoneFeatureConfiguration> {
    public LivingSpongeGeneration(Codec<NoneFeatureConfiguration> p_66219_) {
+      super(p_66219_);
    }
-     
 
    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> p_159956_) {
       int i = 0;
@@ -53,5 +53,4 @@ public class LivingSpongeGeneration extends ModWorldEventsAlt<NoneFeatureConfigu
 
       return i > 0;
    }
-   }
-   
+}

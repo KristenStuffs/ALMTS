@@ -4,22 +4,31 @@ import com.kristen.almts.ALMTS;
 import com.kristen.almts.world.gen.plants.LivingSpongeGeneration;
 
 import net.minecraft.core.Registry;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = ALMTS.MOD_ID)
-public class ModWorldEventsAlt<FC extends FeatureConfiguration> extends net.minecraftforge.registries.ForgeRegistryEntry<Feature<?>>
-{
-       public static final Feature<NoneFeatureConfiguration> LIVING_SPONGE = register("living_sponge", new LivingSpongeGeneration(NoneFeatureConfiguration.CODEC));
-   
+public class ModWorldEventsAlt {
+    private static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, ALMTS.MOD_ID);
+    private static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registry.FEATURE_REGISTRY, ALMTS.MOD_ID);
+
     
-       @SuppressWarnings("deprecation")
-       @SubscribeEvent
- private static <C extends FeatureConfiguration, F extends Feature<C>> F register(String p_65808_, F p_65809_) {
-              return Registry.register(Registry.FEATURE, p_65808_, p_65809_);
-}
-            
-}
+    // Placement
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> MY_KELP = FEATURES.register("my_kelp",
+            () -> new LivingSpongeGeneration(NoneFeatureConfiguration.CODEC));
+
+    // Configuration
+    public static final RegistryObject<ConfiguredFeature<?, ?>> MY_KELP_CONFIGURED = CONFIGURED_FEATURES.register("my_kelp",
+            () -> new ConfiguredFeature<>(MY_KELP.get(), NoneFeatureConfiguration.INSTANCE));
+
+    
+
+    	    public static void register(IEventBus bus) {
+    	        CONFIGURED_FEATURES.register(bus);
+    	        FEATURES.register(bus);
+    	        
+    	    }
+    	}
