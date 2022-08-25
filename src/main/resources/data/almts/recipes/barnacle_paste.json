@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "almts:barnacles"
+    },
+    "$": {
+      "item": "minecraft:slime_ball"
+    },
+    "!": {
+      "item": "minecraft:water_bucket"
+    }	
+  },
+  "pattern": [
+    "$!$",
+    "###"
+  ],
+  "result": {
+    "item": "almts:barnacle_paste",
+    "count": 3
+  }
+}

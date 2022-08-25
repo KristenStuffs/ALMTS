@@ -5,9 +5,7 @@ import java.util.List;
 import com.kristen.almts.ALMTS;
 import com.kristen.almts.world.gen.plants.LivingSpongeGeneration;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.features.AquaticFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -15,50 +13,46 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.NoiseBasedCountPlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+@Mod.EventBusSubscriber(modid = ALMTS.MOD_ID)
 public class ModWorldEventsAlt {
+    private static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registry.FEATURE_REGISTRY, ALMTS.MOD_ID);
     private static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, ALMTS.MOD_ID);
     private static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, ALMTS.MOD_ID);
-    private static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registry.FEATURE_REGISTRY, ALMTS.MOD_ID);
-
     
     // Feature
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> MY_KELP = FEATURES.register("my_kelp",
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> LIVING_SPONGE_GENERATION = FEATURES.register("living_sponge_generation",
             () -> new LivingSpongeGeneration(NoneFeatureConfiguration.CODEC));
 
-    // Configuration
-    public static final RegistryObject<ConfiguredFeature<?, ?>> MY_KELP_CONFIGURED = CONFIGURED_FEATURES.register("my_kelp",
-            () -> new ConfiguredFeature<>(MY_KELP.get(), NoneFeatureConfiguration.INSTANCE));
-  
+    public static final RegistryObject<ConfiguredFeature<?, ?>> LIVING_SPONGE_CONFIGURED = CONFIGURED_FEATURES.register("living_sponge_generation",
+            () -> new ConfiguredFeature<>(LIVING_SPONGE_GENERATION.get(), NoneFeatureConfiguration.INSTANCE));
 
-    // Placement    		 
-    public static final RegistryObject<PlacedFeature> MY_KELP_PLACED = PLACED_FEATURES.register("my_kelp",
-            () -> new PlacedFeature(MY_KELP_CONFIGURED.getHolder().get(), null)))); 
-                       
-            
-    	    public static void register(IEventBus bus) {
-    	        CONFIGURED_FEATURES.register(bus);
-    	        PLACED_FEATURES.register(bus);
-    	        FEATURES.register(bus);
-    	        
-    	    }
-    	    
+    	// Placement
+    public static final RegistryObject<PlacedFeature> LIVING_SPONGE_PLACED = PLACED_FEATURES.register("living_sponge_generation",
+            () -> new PlacedFeature(LIVING_SPONGE_CONFIGURED.getHolder().get(), List.of(NoiseBasedCountPlacement.of(1, 0.000000125D, 0.0D), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())))));
+        
+            @SubscribeEvent
+       public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
+    	   if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
+    		   event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, LIVING_SPONGE_PLACED.getHolder().get());
+    		   }
+        		}
 
-	@SubscribeEvent
-	public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
-		if (event.getCategory() == Biome.BiomeCategory.OCEAN) {
-			event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, MY_KELP_PLACED.get());
-		}
-	}
-	}
-    
+            public static void register(IEventBus bus) {
+	        CONFIGURED_FEATURES.register(bus);
+	        PLACED_FEATURES.register(bus);
+	        FEATURES.register(bus);
+	        
+	    }
+        }            
+ 
+    	  

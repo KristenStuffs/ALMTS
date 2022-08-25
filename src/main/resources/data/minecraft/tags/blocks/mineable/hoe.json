@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "almts:living_sponge",
-  	"almts:living_sponge_plant"
+  	"almts:living_sponge_plant",
+  	"almts:red_sponge"
   ]
 }

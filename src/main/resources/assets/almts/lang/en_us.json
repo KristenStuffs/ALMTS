@@ -12,7 +12,8 @@
 	"block.almts.barnacles": "Barnacles",
 	"block.almts.barnacle_paste": "Barnacle Paste",	
     "block.almts.living_sponge": "Living Sponge",	
-    "block.almts.living_sponge_plant": "Living Sponge Plant",	
+    "block.almts.living_sponge_plant": "Living Sponge Plant",
+    "block.almts.red_sponge": "Red Sponge",	
    
 		
 	"death.attack.barnacles": "%1$s failed a game of chicken",

@@ -7,6 +7,7 @@ import com.kristen.almts.block.custom.ClamShellBlock;
 import com.kristen.almts.block.custom.GiantClamShellBlock;
 import com.kristen.almts.block.custom.LivingSpongeBlock;
 import com.kristen.almts.block.custom.LivingSpongePlantBlock;
+import com.kristen.almts.block.custom.RedSpongeBlock;
 import com.kristen.almts.block.custom.SandDollarBlock;
 import com.kristen.almts.item.ModItems;
 import com.kristen.almts.misc.ModCreativeModeTab;
@@ -62,6 +63,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIVING_SPONGE_PLANT = registerBlock("living_sponge_plant",
             () -> new LivingSpongePlantBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
                     .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), null); 
+    
+    public static final RegistryObject<Block> RED_SPONGE = registerBlock("red_sponge",
+            () -> new RedSpongeBlock(BlockBehaviour.Properties.of(Material.SPONGE)
+            		.strength(0.6f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB);
     
     // Boring Junk
 
