@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "almts:block/red_sponge_cake"
+    },
+    "bites=1": {
+      "model": "almts:block/red_sponge_cake_slice1"
+    },
+    "bites=2": {
+      "model": "almts:block/red_sponge_cake_slice2"
+    },
+    "bites=3": {
+      "model": "almts:block/red_sponge_cake_slice3"
+    },
+    "bites=4": {
+      "model": "almts:block/red_sponge_cake_slice4"
+    }
+  }
+}

@@ -14,10 +14,12 @@
 	"block.almts.barnacle_paste": "Barnacle Paste",	
     "block.almts.living_sponge": "Living Sponge",	
     "block.almts.living_sponge_plant": "Living Sponge Plant",
-    "block.almts.sponge_cake": "Sponge Cake",    
+    "block.almts.sponge_cake": "Sponge Cake", 
+    "block.almts.candle_sponge_cake": "Candle Sponge Cake",         
     "block.almts.red_sponge": "Red Sponge",	
     "block.almts.red_living_sponge": "Living Red Sponge",	
     "block.almts.red_living_sponge_plant": "Living Red Sponge Plant",   
+    "block.almts.red_sponge_cake": "Red Sponge Cake",     
 		
 	"death.attack.barnacles": "%1$s failed a game of chicken",
 	"death.attack.barnacles.player": "%1$s was pushed into barnacles whilst fighting %2$s",

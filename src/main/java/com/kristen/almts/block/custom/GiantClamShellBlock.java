@@ -12,7 +12,7 @@ public class GiantClamShellBlock extends Block {
         super(properties);
     }
 
-    private static final VoxelShape SHAPE =  Block.box(3, 0, 5, 13, 8, 10);
+    private static final VoxelShape SHAPE =  Block.box(1, 0, 5, 15, 12, 10);
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

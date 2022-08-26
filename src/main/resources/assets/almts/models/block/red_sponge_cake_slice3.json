@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "almts:block/red_sponge_cake_side",
+        "bottom": "almts:block/red_sponge_cake_bottom",
+        "top": "almts:block/red_sponge_cake_top",
+        "side": "almts:block/red_sponge_cake_side",
+        "inside": "almts:block/red_sponge_cake_inner"
+    },
+    "elements": [
+        {   "from": [ 9, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

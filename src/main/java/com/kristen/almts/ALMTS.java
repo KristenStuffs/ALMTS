@@ -46,7 +46,7 @@ public class ALMTS {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARNACLE_PASTE.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIVING_SPONGE.get(), RenderType.translucent());   
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIVING_SPONGE_PLANT.get(), RenderType.translucent());   
-    }
+            }
 
 
     private void setup(final FMLCommonSetupEvent event) {

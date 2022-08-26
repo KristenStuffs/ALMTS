@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "almts:candle_sponge_cake",
+    "almts:white_candle_sponge_cake",
+    "almts:orange_candle_sponge_cake",
+    "almts:magenta_candle_sponge_cake",
+    "almts:light_blue_candle_sponge_cake",
+    "almts:yellow_candle_sponge_cake",
+    "almts:lime_candle_sponge_cake",
+    "almts:pink_candle_sponge_cake",
+    "almts:gray_candle_sponge_cake",
+    "almts:light_gray_candle_sponge_cake",
+    "almts:cyan_candle_sponge_cake",
+    "almts:purple_candle_sponge_cake",
+    "almts:blue_candle_sponge_cake",
+    "almts:brown_candle_sponge_cake",
+    "almts:green_candle_sponge_cake",
+    "almts:red_candle_sponge_cake",
+    "almts:black_candle_sponge_cake"
+  ]
+}

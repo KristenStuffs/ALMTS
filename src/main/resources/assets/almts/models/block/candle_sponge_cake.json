@@ -1,0 +1,10 @@
+{
+  "parent": "almts:block/template_sponge_cake_with_candle",
+  "textures": {
+    "candle": "minecraft:block/candle",
+        "particle": "almts:block/sponge_cake_side",
+        "bottom": "almts:block/sponge_cake_bottom",
+        "top": "almts:block/sponge_cake_top",
+        "side": "almts:block/sponge_cake_side"
+  }
+}

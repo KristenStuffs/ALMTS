@@ -3,6 +3,7 @@ package com.kristen.almts.block;
 import com.kristen.almts.ALMTS;
 import com.kristen.almts.block.custom.CustomCarpetWaterlogged;
 import com.kristen.almts.block.custom.BarnaclesBlock;
+import com.kristen.almts.block.custom.CandleSpongeCake;
 import com.kristen.almts.block.custom.ClamShellBlock;
 import com.kristen.almts.block.custom.GiantClamShellBlock;
 import com.kristen.almts.block.custom.LivingSpongeBlock;
@@ -10,6 +11,7 @@ import com.kristen.almts.block.custom.LivingSpongePlantBlock;
 import com.kristen.almts.block.custom.RedLivingSpongeBlock;
 import com.kristen.almts.block.custom.RedLivingSpongePlantBlock;
 import com.kristen.almts.block.custom.RedSpongeBlock;
+import com.kristen.almts.block.custom.RedSpongeCake;
 import com.kristen.almts.block.custom.SandDollarBlock;
 import com.kristen.almts.block.custom.SpongeCake;
 import com.kristen.almts.item.ModItems;
@@ -71,6 +73,10 @@ public class ModBlocks {
             () -> new SpongeCake(BlockBehaviour.Properties.of(Material.CAKE)
                     .strength(0.3f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB); 
     
+    public static final RegistryObject<Block> CANDLE_SPONGE_CAKE = registerBlock("candle_sponge_cake",
+            () -> new CandleSpongeCake(Blocks.CANDLE, BlockBehaviour.Properties.of(Material.CAKE)
+                    .strength(0.3f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), null);     
+    
     public static final RegistryObject<Block> RED_SPONGE = registerBlock("red_sponge",
             () -> new RedSpongeBlock(BlockBehaviour.Properties.of(Material.SPONGE)
             		.strength(0.6f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB);
@@ -82,6 +88,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_LIVING_SPONGE_PLANT = registerBlock("red_living_sponge_plant",
             () -> new RedLivingSpongePlantBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
                     .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), null);
+    
+    public static final RegistryObject<Block> RED_SPONGE_CAKE = registerBlock("red_sponge_cake",
+            () -> new RedSpongeCake(BlockBehaviour.Properties.of(Material.CAKE)
+                    .strength(0.3f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB); 
 
     
     // Boring Junk

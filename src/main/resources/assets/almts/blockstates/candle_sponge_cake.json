@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "almts:block/candle_sponge_cake"
+    },
+    "lit=true": {
+      "model": "almts:block/candle_sponge_cake_lit"
+    }
+  }
+}
