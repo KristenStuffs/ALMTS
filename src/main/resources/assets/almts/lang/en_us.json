@@ -2,7 +2,8 @@
 	"item.almts.pearl": "Pearl",
     "item.almts.shell": "Shell",
     "item.almts.fried_shell": "Fried Shell", 
-     "item.almts.sponge_piece": "Piece of Sponge",    
+    "item.almts.sponge_piece": "Piece of Sponge",    
+    "item.almts.red_sponge_piece": "Piece of Red Sponge",       
 	"item.almts.raw_atlantic_lobster": "Raw Atlantic Lobster",
 	
 	"block.almts.pearl_block": "Pearl Block",
@@ -13,8 +14,10 @@
 	"block.almts.barnacle_paste": "Barnacle Paste",	
     "block.almts.living_sponge": "Living Sponge",	
     "block.almts.living_sponge_plant": "Living Sponge Plant",
+    "block.almts.sponge_cake": "Sponge Cake",    
     "block.almts.red_sponge": "Red Sponge",	
-   
+    "block.almts.red_living_sponge": "Living Red Sponge",	
+    "block.almts.red_living_sponge_plant": "Living Red Sponge Plant",   
 		
 	"death.attack.barnacles": "%1$s failed a game of chicken",
 	"death.attack.barnacles.player": "%1$s was pushed into barnacles whilst fighting %2$s",

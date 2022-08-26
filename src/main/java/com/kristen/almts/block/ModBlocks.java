@@ -7,8 +7,11 @@ import com.kristen.almts.block.custom.ClamShellBlock;
 import com.kristen.almts.block.custom.GiantClamShellBlock;
 import com.kristen.almts.block.custom.LivingSpongeBlock;
 import com.kristen.almts.block.custom.LivingSpongePlantBlock;
+import com.kristen.almts.block.custom.RedLivingSpongeBlock;
+import com.kristen.almts.block.custom.RedLivingSpongePlantBlock;
 import com.kristen.almts.block.custom.RedSpongeBlock;
 import com.kristen.almts.block.custom.SandDollarBlock;
+import com.kristen.almts.block.custom.SpongeCake;
 import com.kristen.almts.item.ModItems;
 import com.kristen.almts.misc.ModCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
@@ -64,9 +67,22 @@ public class ModBlocks {
             () -> new LivingSpongePlantBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
                     .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), null); 
     
+    public static final RegistryObject<Block> SPONGE_CAKE = registerBlock("sponge_cake",
+            () -> new SpongeCake(BlockBehaviour.Properties.of(Material.CAKE)
+                    .strength(0.3f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB); 
+    
     public static final RegistryObject<Block> RED_SPONGE = registerBlock("red_sponge",
             () -> new RedSpongeBlock(BlockBehaviour.Properties.of(Material.SPONGE)
             		.strength(0.6f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.ALMTS_TAB);
+    
+    public static final RegistryObject<Block> RED_LIVING_SPONGE = registerBlock("red_living_sponge",
+            () -> new RedLivingSpongeBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
+                    .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), ModCreativeModeTab.ALMTS_TAB); 
+   
+    public static final RegistryObject<Block> RED_LIVING_SPONGE_PLANT = registerBlock("red_living_sponge_plant",
+            () -> new RedLivingSpongePlantBlock(BlockBehaviour.Properties.copy(Blocks.KELP).noCollission()
+                    .instabreak().requiresCorrectToolForDrops().sound(SoundType.WET_GRASS)), null);
+
     
     // Boring Junk
 

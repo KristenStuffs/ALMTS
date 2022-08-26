@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "almts:living_sponge",
+              "name": "almts:red_living_sponge",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "almts:sponge_piece",
+              "name": "almts:red_sponge_piece",
               "functions": [
                 {
                   "function": "minecraft:set_count",

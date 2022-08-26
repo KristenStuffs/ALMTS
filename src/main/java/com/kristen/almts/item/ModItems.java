@@ -25,6 +25,9 @@ public class ModItems {
 	public static final RegistryObject<Item> SPONGE_PIECE = ITEMS.register("sponge_piece",
 			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.ALMTS_TAB)));
 	
+	public static final RegistryObject<Item> RED_SPONGE_PIECE = ITEMS.register("red_sponge_piece",
+			() -> new Item(new Item.Properties().tab(ModCreativeModeTab.ALMTS_TAB)));	
+	
 	public static final RegistryObject<Item> RAW_ATLANTIC_LOBSTER = ITEMS.register("raw_atlantic_lobster",
 			() -> new Item(
 					new Item.Properties().tab(ModCreativeModeTab.ALMTS_TAB).food(ModFoods.RAW_ATLANTIC_LOBSTER)));

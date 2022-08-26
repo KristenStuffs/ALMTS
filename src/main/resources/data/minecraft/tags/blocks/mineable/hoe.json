@@ -3,6 +3,8 @@
   "values": [
     "almts:living_sponge",
   	"almts:living_sponge_plant",
-  	"almts:red_sponge"
+  	"almts:red_sponge",
+     "almts:red_living_sponge",
+  	"almts:red_living_sponge_plant" 	
   ]
 }
