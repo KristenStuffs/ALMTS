@@ -47,10 +47,10 @@ public class ModWorldEventsAlt {
 
     	// Placement
     public static final RegistryObject<PlacedFeature> LIVING_SPONGE_PLACED = PLACED_FEATURES.register("living_sponge_generation",
-            () -> new PlacedFeature(LIVING_SPONGE_CONFIGURED.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(196), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())))));
+            () -> new PlacedFeature(LIVING_SPONGE_CONFIGURED.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(128), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())))));
  
      public static final RegistryObject<PlacedFeature> RED_LIVING_SPONGE_PLACED = PLACED_FEATURES.register("red_living_sponge_generation",
-            () -> new PlacedFeature(RED_LIVING_SPONGE_CONFIGURED.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(512), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())))));         
+            () -> new PlacedFeature(RED_LIVING_SPONGE_CONFIGURED.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(400), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())))));         
             
             @SubscribeEvent
        public static void biomeLoadingEvent(final BiomeLoadingEvent event) {

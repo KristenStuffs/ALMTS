@@ -4,7 +4,7 @@
         "bottom": "almts:block/red_sponge_cake_bottom",
         "top": "almts:block/red_sponge_cake_top",
         "side": "almts:block/red_sponge_cake_side",
-        "inside": "almts:block/_cake_inner"
+        "inside": "almts:block/red_sponge_cake_inner"
     },
     "elements": [
         {   "from": [ 6, 0, 1 ],
